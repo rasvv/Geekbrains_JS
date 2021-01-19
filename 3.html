@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson2-Task3</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+			let a = Number(prompt("Введите первое число"));
+			let b = Number(prompt("Введите второе число"));
+			let result;
+
+			if (a >= 0 && b >= 0) {
+				result = "Разница чисел a и b равна: " + (a - b);
+			} else
+			if (a < 0 && b < 0) {
+				result = "Произведение чисел a и b равно: " + (a * b);
+			} else
+			if ((a >= 0 && b < 0) || (a < 0 && b >= 0)) {
+				result = "Сумма чисел a и b равна: " + (a + b);
+			};
+
+			alert(result);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson2-Task4</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			const sum = (a, b) => a + b
+			const dif = (a, b) => a - b
+			const mul = (a, b) => a * b
+			const div = (a, b) => (a / b).toFixed(2)
+
+			let a = Number(prompt("Введите первое число"));
+			let b = Number(prompt("Введите второе число"));
+
+			alert("Сумма чисел: " + a + " и " + b + " равна: " + sum(a, b));
+			alert("Разность чисел: " + a + " и " + b + " равна: " + dif(a, b));
+			alert("Произведение чисел: " + a + " и " + b + " равно: " + mul(a, b));
+			alert("Частное чисел: " + a + " и " + b + " равно: " + div(a, b));
+		</script>
+	</body>
+
+</html>
