@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson2-Task5</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			const sum = (a, b) => a + b
+			const dif = (a, b) => a - b
+			const mul = (a, b) => a * b
+			const div = (a, b) => (a / b).toFixed(2)
+
+			function mathOperation(a, b, symbol) {
+				switch (symbol) {
+					case "+":
+						return ("Сумма чисел: " + a + " и " + b + " равна: " + sum(a, b));
+						break;
+					case "-":
+						return ("Разность чисел: " + a + " и " + b + " равна: " + dif(a, b));
+						break;
+					case "*":
+						return ("Произведение чисел: " + a + " и " + b + " равно: " + mul(a, b));
+						break;
+					case "/":
+						return ("Частное чисел: " + a + " и " + b + " равно: " + div(a, b));
+						break;
+				}
+			}
+
+
+
+			let a = Number(prompt("Введите первое число"));
+			let b = Number(prompt("Введите второе число"));
+			let symbol = prompt("Введите арифметический оператор: *, /, +, -");
+
+			if (symbol === "+" || symbol === "-" || symbol === "*" || symbol === "/") {
+				alert(mathOperation(a, b, symbol))
+			} else
+				alert('"' + symbol + '" - не является арифметическим оператором')
+		</script>
+	</body>
+
+</html>

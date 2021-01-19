@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson2-Task6</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			function value(summa) {
+				// Конвертируем сумму в строку
+				let summaStr = String(summa);
+
+				//Узнаем длину строки
+				let len = summaStr.length;
+
+				//Берем последнюю цифру
+				let last = summaStr[len - 1];
+
+				//Если число знаков суммы больше 1, то определяем предпоследнюю цифру
+				let prev;
+				if (len > 1) {
+					prev = summaStr[len - 2];
+				}
+				//Если последние 2 цифры начинаются с 1, то всегда будет "рублей"
+				if (prev == 1) {
+					return ("рублей")
+				} else {
+					switch (last) {
+						case "0":
+						case "5":
+						case "6":
+						case "7":
+						case "8":
+						case "9":
+							return ("рублей");
+							break;
+						case "2":
+						case "3":
+						case "4":
+							return ("рубля");
+							break;
+						case "1":
+							return ("рубль");
+							break;
+					}
+				}
+			}
+
+			let summa = Number(prompt("Введите сумму в рублях для зачисления на Ваш счет"));
+
+			alert("Ваша сумма  в " + summa + " " + value(summa) + " успешно зачислена");
+		</script>
+	</body>
+
+</html>
