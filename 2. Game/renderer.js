@@ -37,7 +37,7 @@ let renderer = {
 					this.map += '. ';	
 				}
 			}
-			this.map += '\n'
+			this.map += '\n';
 		}
 		console.log(this.map);
 	},
