@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson4-Task1.1</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			//----------------------   ES6   ---------------------------------
+			class Product {
+				constructor(name, price) {
+					this.name = name;
+					this.price = price;
+				}
+
+				make25PercentDiscount = function () {
+					this.price = this.price - (this.price * 0.25);
+				}
+			}
+
+			let product1 = new Product('Ноутбук', 56789);
+			console.log("Цена товара " + '"' + product1.name + '" ' + "без скидки: " + product1.price + " руб.");
+			product1.make25PercentDiscount();
+			console.log("Цена товара " + '"' + product1.name + '" ' + "со скидкой: " + product1.price + " руб.");
+		</script>
+	</body>
+
+</html>
