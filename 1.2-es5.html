@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson4-Task1.2</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			//----------------------   ES5   ---------------------------------
+			function Post(author, text, date) {
+				this.author = author;
+				this.text = text;
+				this.date = date;
+			}
+
+			Post.prototype.edit = function (text) {
+				this.text = text;
+			};
+
+			const post1 = new Post('Иванов', 'Всем привет!', new Date());
+			alert(post1.text);
+			post1.edit('Everyboby come on!');
+			alert(post1.text);
+
+
+			function AttachedPost(author, text, date, ) {
+				Post.call(this, author, text, date);
+				this.highlighted = false;
+			}
+
+			AttachedPost.prototype = Object.create(Post.prototype);
+			AttachedPost.prototype.constructor = AttachedPost;
+
+			AttachedPost.prototype.makeTextHighlighted = function () {
+				this.highlighted = true;
+			}
+
+
+			const attachedpost1 = new AttachedPost('Петров', 'Здравствуйте!', new Date());
+			console.log(attachedpost1);
+			attachedpost1.makeTextHighlighted();
+			attachedpost1.edit('dolor2 sit2');
+			console.log(attachedpost1);
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson4-Task1</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			function numberTo(number) {
+				if (Number.isSafeInteger(number) && number > 0 && number < 1000) {
+					return {
+						units: number % 10,
+						tens: Math.floor(number / 10) % 10,
+						hundreds: Math.floor(number / 100),
+					};
+
+				} else {
+					console.log("Число должно быть целым, больше ноля и меньше 1000");
+				}
+			}
+			let number = Number(prompt("Введите целое число от 1 до 999 включительно"));
+			console.log(numberTo(number));
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lesson4-Task1.2</title>
+	</head>
+
+	<body>
+		<script>
+			"use strict";
+
+			//----------------------   ES5   ---------------------------------
+
+			class Post {
+				constructor(author, text, date) {
+					this.author = author;
+					this.text = text;
+					this.date = date;
+				}
+
+
+				edit(text) {
+					this.text = text;
+				}
+			}
+
+			let post1 = new Post('Иванов', 'Всем привет!', new Date());
+			console.log(post1.author + " написал: " + post1.text);
+			post1.edit('Everyboby come on!');
+			console.log(post1.author + " исправил: " + post1.text);
+
+
+			class AttachedPost extends Post {
+				constructor(author, text, date) {
+					super(author, text, date);
+					this.highlighted = false;
+				}
+
+				makeTextHighlighted() {
+					this.highlighted = true;
+				}
+			}
+
+
+			let attachedpost1 = new AttachedPost('Петров', 'До свидания!', new Date());
+			console.log(attachedpost1.author + " написал: " + attachedpost1.text + ". Подсветка: " + attachedpost1.highlighted);
+			attachedpost1.makeTextHighlighted();
+			attachedpost1.edit('До встречи!');
+			console.log(attachedpost1.author + " исправил: " + attachedpost1.text + ". Подсветка: " + attachedpost1.highlighted);
+		</script>
+	</body>
+
+</html>
