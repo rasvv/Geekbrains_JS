@@ -19,7 +19,12 @@
     -->
 
     <script>
-        
+        let findB = document.getElementsByTagName('b');
+        for(let i = 0; i < findB.length; i++){
+            if (!findB[i].classList.contains('sign')) {
+                findB[i].classList.add('sign');
+            }
+        }
     </script>
 </body>
 </html>

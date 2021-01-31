@@ -24,6 +24,10 @@
     объект события, передаваемый в функцию-обработчик клика. -->
 
     <script>
+        let findUl = document.querySelector('ul');
+        findUl.addEventListener('click', function(event){
+            console.log(event.target);
+        })
         
     </script>
 </body>

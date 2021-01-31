@@ -22,6 +22,14 @@
     <div>Другое описание</div>
     для этого вышеописанную разметку пишите в виде строки в innerHTML.
     -->
+    <script>
+        let findCl = document.getElementsByClassName('product');
+        findCl[0].addEventListener('click', function(event){
+            // event.target.innerHTML = 'Другое описание';
+            // findSpan.innerHTML = 'Другой товар';
+            findCl[0].innerHTML = `<div>Другой товар</div><div>Другое описание</div>`
+        })
+    </script>
 
 </body>
 </html>

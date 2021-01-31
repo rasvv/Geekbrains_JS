@@ -14,7 +14,12 @@
     из элементов. -->
 
     <script>
-        
+        let findBtn = document.querySelector('button');
+        let findTA = document.querySelector('textarea');
+        findBtn.addEventListener('click', function(event){
+            findBtn.style.fontSize = '30px';
+            findTA.style.backgroundColor = 'green';
+        })
     </script>
 </body>
 </html>
