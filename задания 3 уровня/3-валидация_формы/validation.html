@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        input {
-            border-style: solid;
-        }
-    </style>
-</head>
-<body>
-    <form>
-        <input id="first" type="text"><br>
-        <br>
-        <input id="second" type="text"><br>
-        <br>
-        <button>Отправить</button>
-    </form>
 
-    <!-- 
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			input {
+				border-style: solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form>
+			<input id="first" type="text"><br>
+			<br>
+			<input id="second" type="text"><br>
+			<br>
+			<button>Отправить</button>
+		</form>
+
+		<!-- 
         Задание. Вам нужно проверять пусто ли в input'ах при отправке формы.
         Если в инпуте пусто делаете ему красную рамку. Если хотя бы в одном
         инпуте пусто форма не должна отправляться.
@@ -35,8 +37,29 @@
             4.3 чтобы остановить отправку формы используйте event.preventDefault()
      -->
 
-    <script>
-        
-    </script>
-</body>
+		<script>
+			function checkEmpty(input) {
+				if (input.value === '') {
+					event.preventDefault();
+					input.style.borderColor = 'red';
+					result = true
+				} else {
+					input.style.borderColor = 'black';
+					result = false;
+				}
+			};
+
+			let formEl = document.querySelector('form');
+			// let first = document.getElementById('first');
+			// let second = document.getElementById('second');
+			let inputs = document.querySelectorAll('input');
+
+			formEl.addEventListener('submit', function (event) {
+				inputs.forEach(function (input) {
+					checkEmpty(input);
+				});
+			});
+		</script>
+	</body>
+
 </html>

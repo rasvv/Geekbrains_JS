@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="product">
-        <div>Товар 1</div>
-        <img src="images/1.jpg" alt="">
-        <button>В корзину</button>
-    </div>
-    <div class="product">
-        <div>Товар 1</div>
-        <img src="images/2.jpg" alt="">
-        <button>В корзину</button>
-    </div>
-    <div class="product">
-        <div>Товар 1</div>
-        <img src="images/3.jpg" alt="">
-        <button>В корзину</button>
-    </div>
 
-    <!-- Задание. Нужно чтобы при клике по кнопке блок .product в котором она
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<div class="product">
+			<div>Товар 1</div>
+			<img src="images/1.jpg" alt="">
+			<button>В корзину</button>
+		</div>
+
+		<div class="product">
+			<div>Товар 1</div>
+			<img src="images/2.jpg" alt="">
+			<button>В корзину</button>
+		</div>
+
+		<div class="product">
+			<div>Товар 1</div>
+			<img src="images/3.jpg" alt="">
+			<button>В корзину</button>
+		</div>
+
+		<!-- Задание. Нужно чтобы при клике по кнопке блок .product в котором она
     находится становился цвета lightgreen, а текст на кнопке стал "Добавлено",
     для этого:
     1. Найдите все кнопки, например с помощью querySelectorAll
@@ -40,8 +44,18 @@
     событие (свойство target) и меняете у нее текст на "Добавлено".
     -->
 
-    <script>
-        
-    </script>
-</body>
+		<script>
+			function buttonClickHandler(event) {
+				event.currentTarget.parentNode.style.backgroundColor = 'lightgreen';
+				event.currentTarget.innerText = 'Добавлено';
+			};
+
+			let buttons = document.querySelectorAll('button');
+
+			buttons.forEach(function (button) {
+				button.addEventListener('click', () => buttonClickHandler(event));
+			});
+		</script>
+	</body>
+
 </html>
