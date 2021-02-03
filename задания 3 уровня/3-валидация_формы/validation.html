@@ -50,15 +50,10 @@
 			};
 
 			let formEl = document.querySelector('form');
-			// let first = document.getElementById('first');
-			// let second = document.getElementById('second');
+
 			let inputs = document.querySelectorAll('input');
 
-			formEl.addEventListener('submit', function (event) {
-				inputs.forEach(function (input) {
-					checkEmpty(input);
-				});
-			});
+			formEl.addEventListener('submit', (event) => inputs.forEach((input) => checkEmpty(input)));
 		</script>
 	</body>
 

@@ -21,9 +21,8 @@
     <script>
         let span = document.querySelector('span');
         let fromEI = document.querySelector('input');
-        fromEI.addEventListener('change', function() {
-            span.innerText = event.target.value;
-        });
+        
+        fromEI.addEventListener('change', () => span.innerText = event.target.value);
         
     </script>
 </body>
