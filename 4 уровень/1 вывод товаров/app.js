@@ -75,6 +75,10 @@ const products = {
     ],
 };
 
+let btn = document.querySelector('button');
+btn.addEventListener('click', (event) => clickHandler(event));
+let products = document.querySelector('.products');
+
 
 /**
  * Эта функция должна вызываться при клике по кнопкам.
@@ -82,10 +86,10 @@ const products = {
  */
 function clickHandler(event) {
     //вам нужно очищать содержимое .products
+    products.append
     
     //в showCategory надо передать строку с типом категории, тип берите
     //из атрибута data-type у кнопки, по которой кликнули.
-    
 }
 
 /**

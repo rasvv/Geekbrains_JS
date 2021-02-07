@@ -35,8 +35,7 @@ function clickHandler(event) {
  */
 function changeActiveClass(event) {
 	links.forEach((link) => link.classList.remove('active'));
-	event.target.classList.append('class');
-    
+	event.target.classList.add('active');
 }
 
 /**
@@ -46,5 +45,15 @@ function changeActiveClass(event) {
  * @param {MouseEvent} event 
  */
 function changeText(event) {
-    
+    switch (event.target.innerText){
+        case 'Link 1' :
+            txt.innerText = texts.text1;
+            break;
+        case 'Link 2' :
+            txt.innerText = texts.text2;
+            break;
+        case 'Link 3' :
+            txt.innerText = texts.text3;
+            break;
+    }
 }
