@@ -1,7 +1,7 @@
 'use strict';
 
 // 1. Получите ссылку на .scrollCheck
-let scrollCheck = ;
+let scrollCheck = document.querySelector('.scrollCheck');
 
 /**
  * Инициализация. При открытии страницы вставляем несколько постов
